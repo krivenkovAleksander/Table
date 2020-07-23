@@ -1,0 +1,210 @@
+@import '../../../GlobalStyles/Colors';
+@import '../../../GlobalStyles/Text';
+.TestBlock
+{
+    width: 100%;
+    background: green;
+    height: 600px;
+    grid-column: span 4;
+    
+}
+.FullTable
+{
+    display: inline-grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    text-align: left;
+    &.Level2
+    {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    &.Level3
+    {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    
+    thead,
+    tbody,
+    tr {
+    display: contents;
+    min-width: 100%;
+    }
+    th, td{
+        text-overflow: clip;
+        position: relative;
+        // z-index: 1;
+        // overflow: hidden;
+    }
+    .Headers
+    {
+        .Header
+        {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-right: 16px;
+            @include Subtitle1;
+            
+            &.Level1
+            {
+                color: $BlueA700;
+            }
+            &.Level2
+            {
+                color: $DeepPurpleA700;       
+            }
+            &.Level3
+            {
+                color: $PinkA700;
+            }
+        }
+    }
+
+    tbody
+    {
+        tr
+        {
+            
+            &:last-child
+            {
+                td{
+
+                    &.Level1
+                    {
+                        border-bottom: 1px solid $Blue200;
+                    }
+                    &.Level2
+                    {
+                        border-bottom: 1px solid $DeepPurple200;
+                    }
+                    &.Level3
+                    {
+                        border-bottom: 1px solid $Pink200;
+                    }
+                }
+            }
+        }
+        
+    }
+    .soloRom
+    {
+        @include Body1;
+        &.Level1
+        {
+            &.Controlled
+            {
+                &:hover
+                {
+                    cursor: pointer;
+                    td{
+                        background: $Blue50;;
+                    }
+                }
+            }
+        }
+        &.Level2
+        {
+            &.Controlled
+            {
+                &:hover
+                {
+                    cursor: pointer;
+                    td{
+                        background: $DeepPurple50;
+                    }
+                    
+                }
+            }
+        }
+        &.Level3
+        {
+            &.Controlled
+            {
+                &:hover
+                {
+                    td{
+                        background: $Pink50;
+                    }
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+        .SoloInfo
+        {
+            border-top: 0.5px solid $Blue200; 
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-right: 16px;
+            padding-left: 8px;
+            &.Controller
+            {
+                cursor: pointer;
+                &.Level1
+                {
+                    &.Open
+                    {
+                        background: url('../../../icons/DropDownHeaders/DropUpLevel1.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        
+                    }
+                    &.Close
+                    {
+                        
+                        background: url('../../../icons/DropDownHeaders/DropDownLevel1.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+                &.Level2
+                {
+                    &.Open
+                    {
+                        background: url('../../../icons/DropDownHeaders/DropUpLevel2.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    &.Close
+                    {
+                        
+                        background: url('../../../icons/DropDownHeaders/DropDownLevel2.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+                &.Level3
+                {
+                    &.Open
+                    {
+                        background: url('../../../icons/DropDownHeaders/DropUpLevel3.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    &.Close
+                    {
+                        
+                        background: url('../../../icons/DropDownHeaders/DropDownLevel3.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+
+            }
+            &.Level1
+            {
+                border-top: 0.5px solid $Blue200;
+            }
+            &.Level2
+            {
+                border-top: 0.5px solid $DeepPurple200;
+            }
+            &.Level3
+            {
+                border-top: 0.5px solid $Pink200;
+            }
+        }
+
+    }
+}
